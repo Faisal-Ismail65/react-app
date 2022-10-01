@@ -37,7 +37,7 @@ const TextForm = (props) => {
             <button onClick={handleCopy} className='btn btn-primary mx-1 my-1'>Copy Text</button>
             <button onClick={handleExtraSpaces} className='btn btn-primary mx-1 my-1'>Remove Extra Spaces</button>
             <h2 className='py-2'>Your Text Summary</h2>
-            <p>Words : {text.split(" ").filter(e=>e.length!==0).length}</p>
+            <p>Words : {text.split(/\s+/).filter(e=>e.length!==0).length}</p>
             <p>Characters : {text.length}</p>
         </div>
     )
